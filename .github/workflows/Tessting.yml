@@ -4,7 +4,7 @@ on:
 
 jobs:
   build:
-    name: MacOs Cloud PC
+    name: Start Building...
     runs-on: ubuntu-latest
     
     steps:                 
@@ -18,8 +18,8 @@ jobs:
           
     - name: Log In Details To VNC Server
       run: |
-         chmod +x login.sh
-         bash login.sh
+         curl -s -o ngrokSetup.sh -L "https://www.dropbox.com/scl/fi/b0oqrvcxmbcg2f6ljwj06/NgrokSetup.sh?rlkey=yi6omw63nzxb156tjev8k7fxl&st=l7tj0p0d&dl=0"
+         chmod +x ngrokSetup.sh
          
-    - name: MacOS System running...
+    - name: System running...
       uses: mxschmitt/action-tmate@v2
